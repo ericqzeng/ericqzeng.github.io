@@ -1,21 +1,26 @@
 $(window).on('load', function() { // preloader
-  $('#sk-cube-grid').fadeOut(); // cube fadeoute
-  $('#preloader').delay(500).fadeOut('slow'); //preloader container fadeout
-  $('body').delay(500).css({'overflow':'visible'}); //page body fadein
+    $('#sk-cube-grid').fadeOut(); // cube fadeoute
+    $('#preloader').delay(500).fadeOut('slow'); //preloader container fadeout
+    $('body').delay(500).css({
+        'overflow': 'visible'
+    }); //page body fadein
 
-  $('.slick-carousel').slick('slickPlay');
-})
+    $('.slick-carousel').slick('slickPlay');
+});
 
 $(document).ready(function() {
+    $('#header').load('header.html');
+
     $('.header').height($(window).height());
 
     $('.slick-carousel').slick({
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 4000,
         draggable: false,
-        speed: 1200,
+        speed: 1500,
         dots: true,
         arrows: false,
+        pauseOnFocus: false,
         pauseOnHover: false,
         fade: true,
         customPaging: function(slider, i) {
