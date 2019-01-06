@@ -6,10 +6,12 @@ $(window).on('load', function() { // preloader
     }); //page body fadein
 
     $('.slick-carousel').slick('slickPlay');
-});
+})
+
 
 $(document).ready(function() {
     $('#header').load('header.html');
+    $('#preloader').load('preloader.html');
 
     $('.header').height($(window).height());
 
@@ -29,6 +31,4 @@ $(document).ready(function() {
     });
 
     $('.slick-carousel').slick('slickPause');
-
-    // $('#')
 });

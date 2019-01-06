@@ -17,11 +17,8 @@
     <link rel="stylesheet" type="text/css" href="css/core.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 
+    <!--  about page custom css -->
     <link rel="stylesheet" type="text/css" href="css/about.css">
-
-
-    <!--  slick css -->
-    <link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick.css" />
 </head>
 
 <body>
@@ -59,11 +56,13 @@
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="node_modules/slick-carousel/slick/slick.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
+            $('#header').load('header.html');
+        });
+
+        $(window).on('load', function() {
             $('.container').css({
                 'display': 'block'
             });
