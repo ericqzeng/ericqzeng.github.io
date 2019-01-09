@@ -19,6 +19,7 @@ $(document).ready(function() {
         }
     });
 
+    // coutesy of masonry-layout extra tips!
     $.fn.masonryImagesReveal = function($items) {
         var msnry = this.data('masonry');
         var itemSelector = msnry.options.itemSelector;
@@ -39,13 +40,37 @@ $(document).ready(function() {
         return this;
     };
 
+    // sets up html text for pictures
+    //TODO: link with prismic
     var items = '';
     for (var i = 0; i < nPics; i++) {
-        items += "<div class='grid-item'><img src='img/portfolio/" + i + ".jpg' /></div>";
+        items += "<a data-fancybox='gallery' href='img/portfolio/" + i + ".jpg' class='grid-item'><img src='img/portfolio/" + i + ".jpg' /></a>";
     }
 
+    // execute fancy "fade-up-reveal-as-loaded"
     grid.masonryImagesReveal($(items));
 
+    // add margin-bottom initially ...
+    $('.grid-item').css({
+        'margin-bottom': jQuery('.gutter-sizer').width() + 'px'
+    });
+
+    // ... and refresh margin-bottom if the layout changes (usually window resize)
+    grid.on('layoutComplete', function() {
+        $('.grid-item').css({
+            'margin-bottom': jQuery('.gutter-sizer').width() + 'px'
+        });
+    });
+
+    $('[data-fancybox="gallery"]').fancybox({
+        buttons: [
+            "zoom",
+            //"share",
+            "fullScreen",
+            //"download",
+            "close"
+        ]
+    });
 });
 
 // $(window).on('load', function() {

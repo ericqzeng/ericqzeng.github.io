@@ -23,7 +23,7 @@ html {
 }
 
 .grid-item {
-    margin-bottom: 20px;
+    /* margin-bottom set in js */
     float: center;
 }
 
