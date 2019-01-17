@@ -2,6 +2,7 @@ var nPics = 8; // will load images [0.jpg, 1.jpg, ... nPics.jpg]
 
 $(document).ready(function() {
     $('#header').load('header.html');
+    $('#footer').load('footer.html');
 
     var grid = $('.grid').masonry({
         gutter: '.gutter-sizer',

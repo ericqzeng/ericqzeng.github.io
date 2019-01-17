@@ -1,7 +1,10 @@
+html {
+    overflow-y: scroll;
+}
+
 .container {
     margin-top: 15px;
-    display: none;
-    z-index: -10;
+    display: none; /* hide until fully loaded */
 }
 
 .navbar {
