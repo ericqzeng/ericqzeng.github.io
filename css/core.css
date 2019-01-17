@@ -226,15 +226,22 @@ body {
 }
 
 .social-list {
-    margin-right: 25%;
-    margin-left: 25%;
+    padding: 0 0 0 0;
+    margin: 0 25% 0 25%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+    .social-list {
+        margin: 0 15% 0 15%;
+    }
 }
 
 .social-list li {
     list-style-type: none;
     cursor: pointer;
     text-align: center;
+    margin: 0 5px 0 5px;
 }
