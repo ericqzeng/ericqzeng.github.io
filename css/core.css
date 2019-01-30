@@ -3,7 +3,6 @@ body {
     /* will become visible after preload */
     font-family: Ubuntu, "times new roman", times, roman, serif;
     overscroll-behavior: none;
-
     /*  Flexbox so footer can be sticky to bottom */
     display: flex;
     flex-direction: column;
@@ -113,6 +112,14 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+/* .item img {
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    text-align: center;
+} */
+
 
 /*  Preloader */
 #preloader {

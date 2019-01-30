@@ -25,6 +25,7 @@ $(document).ready(function() {
         pauseOnFocus: false,
         pauseOnHover: false,
         fade: true,
+        cssEase: 'ease-out',
         customPaging: function(slider, i) {
             return '<img src="img/landing/' + i + '.jpg">';
         },
