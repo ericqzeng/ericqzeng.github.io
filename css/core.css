@@ -59,6 +59,13 @@ body {
 }
 
 /* slick carousel  */
+.carousel-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .slick-list {
     z-index: -1;
 }

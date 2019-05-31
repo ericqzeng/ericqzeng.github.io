@@ -10,8 +10,8 @@ $(window).on('load', function() { // preloader
 
 
 $(document).ready(function() {
-    $('#header').load('header.html');
-    $('#preloader').load('preloader.html');
+    $('#header').load('html/header.html');
+    $('#preloader').load('html/preloader.html');
 
     $('.header').height($(window).height());
 
