@@ -1,4 +1,4 @@
-var nPics = 17; // will load images [0.jpg, 1.jpg, ... (n-1)Pics.jpg]
+var nPics = 18; // will load images [0.jpg, 1.jpg, ... (n-1)Pics.jpg]
 
 $(document).ready(function() {
     $('#header').load('html/header.html');
