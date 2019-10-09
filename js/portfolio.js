@@ -1,6 +1,6 @@
-var nPics = 18; // will load images [0.jpg, 1.jpg, ... (n-1)Pics.jpg]
+var nPics = 20; // will load images [0.jpg, 1.jpg, ... (n-1)Pics.jpg]
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('#header').load('header.html');
     $('#footer').load('footer.html');
 
@@ -21,14 +21,14 @@ $(document).ready(function() {
     });
 
     // coutesy of masonry-layout extra tips!
-    $.fn.masonryImagesReveal = function($items) {
+    $.fn.masonryImagesReveal = function ($items) {
         var msnry = this.data('masonry');
         var itemSelector = msnry.options.itemSelector;
         // hide by default
         $items.hide();
         // append to container
         this.append($items);
-        $items.imagesLoaded().progress(function(imgLoad, image) {
+        $items.imagesLoaded().progress(function (imgLoad, image) {
             // get item
             // image is imagesLoaded class, not <img>, <img> is image.img
             var $item = $(image.img).parents(itemSelector);
@@ -57,7 +57,7 @@ $(document).ready(function() {
     });
 
     // ... and refresh margin-bottom if the layout changes (usually window resize)
-    grid.on('layoutComplete', function() {
+    grid.on('layoutComplete', function () {
         $('.grid-item').css({
             'margin-bottom': jQuery('.gutter-sizer').width() + 'px'
         });
